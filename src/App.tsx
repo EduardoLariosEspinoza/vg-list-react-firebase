@@ -1,11 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Auth from "./pages/auth"
 
 function App() {
   return (
     <div>
       <Router>
         <Routes>
-          <Route path="/" element={<h1>Hello, world!</h1>} />
+          <Route path="/" element={<Auth />} />
         </Routes>
       </Router>
     </div>
