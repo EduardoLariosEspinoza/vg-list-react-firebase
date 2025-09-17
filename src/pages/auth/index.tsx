@@ -28,19 +28,21 @@ function Auth() {
         justifyContent: { sx: "center", md: "space-around" },
         alignItems: "center",
         textAlign: "center",
+        backgroundImage:
+          "radial-gradient(ellipse at 50% 50%, hsl(210, 100%, 97%), hsl(0, 0%, 100%))",
+        backgroundRepeat: "no-repeat",
       }}
     >
       <Stack alignItems="center">
         <Typography
-          variant="h3"
-          component="h1"
-          sx={{ m: 5, alignItems: "center" }}
+          variant="h1"
+          sx={{ m: 5, alignItems: "center", color: "primary.main" }}
         >
           MyVGList
         </Typography>
 
         <Typography
-          variant="h5"
+          variant="subtitle1"
           component="p"
           sx={{ m: 5, maxWidth: 400, alignItems: "center" }}
         >
