@@ -1,8 +1,7 @@
-import { Box, Card, Paper, Stack, Typography } from "@mui/material";
+import { Box, Paper, Stack, Typography } from "@mui/material";
 import { auth, provider } from "../../config/firebase";
 import { signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-import styled from "@emotion/styled";
 
 function Auth() {
   const navigate = useNavigate();
@@ -22,14 +21,30 @@ function Auth() {
   // Separate info and auth card into two different components
   return (
     <Stack
-      direction={{ sx: "column", md: "row" }}
-      spacing={2}
-      justifyContent="center"
-      alignItems="center"
+      sx={{
+        height: "90vh",
+        width: "100vw",
+        flexDirection: { sx: "column", md: "row" },
+        justifyContent: { sx: "center", md: "space-around" },
+        alignItems: "center",
+        textAlign: "center",
+      }}
     >
-      <Stack>
-        <Typography variant="h2" align="center" sx={{ m: 5 }}>
+      <Stack alignItems="center">
+        <Typography
+          variant="h3"
+          component="h1"
+          sx={{ m: 5, alignItems: "center" }}
+        >
           MyVGList
+        </Typography>
+
+        <Typography
+          variant="h5"
+          component="p"
+          sx={{ m: 5, maxWidth: 400, alignItems: "center" }}
+        >
+          Select and save your games collection and save your progress.
         </Typography>
       </Stack>
 
