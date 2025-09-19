@@ -1,4 +1,12 @@
-import { Box, Paper, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  FormControl,
+  FormLabel,
+  Paper,
+  Stack,
+  TextField,
+  Typography,
+} from "@mui/material";
 import { auth, provider } from "../../config/firebase";
 import { signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
@@ -50,17 +58,39 @@ function Auth() {
         </Typography>
       </Stack>
 
-      <Paper elevation={3} sx={{ p: 5, m: 5 }}>
-        <Stack spacing={2} alignItems="center">
+      <Paper elevation={3} sx={{ p: 5, m: 5, width: { xs: "60%", md: "30%" } }}>
+        <Stack spacing={4} sx={{ alignItems: "center" }}>
           <Typography variant="h4">Welcome to MyVGList</Typography>
-          <Typography variant="subtitle1">
-            Please sign in with your Google account to continue
-          </Typography>
-          <Box
-            component="img"
-            sx={{ height: 100, width: 100, cursor: "pointer" }}
-            alt="Google Sign-In"
-          />
+
+          <Box sx={{ width: "100%" }}>
+            <FormControl
+              variant="outlined"
+              sx={{
+                width: "100%",
+                alignItems: "left",
+                gap: 1,
+                borderRadius: 2,
+              }}
+            >
+              <FormLabel htmlFor="email">
+                <Typography
+                  variant="body1"
+                  sx={{ color: "text.primary", textAlign: "left" }}
+                >
+                  Email
+                </Typography>
+              </FormLabel>
+              <TextField
+                placeholder="Type your email"
+                id="email"
+                type="email"
+                name="email"
+                required
+                fullWidth
+                size="small"
+              />
+            </FormControl>
+          </Box>
         </Stack>
       </Paper>
     </Stack>
