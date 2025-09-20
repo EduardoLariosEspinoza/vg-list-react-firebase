@@ -47,6 +47,9 @@ export const themeOptions: ThemeOptions = {
     body1: {
       fontSize: '1rem',
     },
+    body2: {
+      fontSize: '0.875rem',
+    },
   },
 };
 
